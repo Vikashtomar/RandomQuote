@@ -1,77 +1,57 @@
- <!DOCTYPE html>
+<!-- @format -->
+
+<!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Quote Generator</title>
     <style>
-        .parent{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        h1 {
-            padding-bottom: 20px;
-        }
-        .main{
-            background-color: rgb(204, 156, 156);
-            border-radius: 20px;
-            
-        }
-         
-        #btn{
-            background-color: black;
-            color: white;
-            margin: 20px 0px 20px 135px;          
-            border-radius: 10px;            
-            padding: 10px;
-            font-family: sans-serif;
-            box-shadow: 3px 3px 2px wheat;
-        }
-        #para{
-            background-color: rgb(192, 238, 132);
-            margin: auto;
-            border-radius: 10px;
-            width: 300px;
-            height: 70px;
-            box-shadow: 5px 5px 2px black;
-        }
+      .parent {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      h1 {
+        padding-bottom: 20px;
+      }
+      .main {
+        background-color: rgb(204, 156, 156);
+        border-radius: 20px;
+        width: 50%;
+        text-align: center;
+      }
+
+      #btn {
+        background-color: black;
+        color: white;
+        margin: 15px;
+        border-radius: 10px;
+        padding: 10px 20px;
+        font-family: sans-serif;
+        box-shadow: 3px 3px 2px wheat;
+      }
+      #para {
+        background-color: black;
+        margin: auto;
+        border-radius: 10px;
+        width: 300px;
+        height: 70px;
+        box-shadow: 5px 5px 2px black;
+        padding: 20px;
+        font-weight: bold;
+        color: #fff;
+      }
     </style>
-</head>
-<body>
-
+  </head>
+  <body>
     <div class="parent">
-        <div class="main">
-        <h1>
-            Random Quote Generator
-        </h1>
-        <p id="para">
-
-        </p>
-        <button id="btn" onclick="myfun()">
-            Click ME
-        </button>
+      <div class="main">
+        <h1>Random Quote Generator</h1>
+        <p id="para"></p>
+        <button id="btn" onclick="myfun()">Click ME</button>
+      </div>
     </div>
-    </div>
-    
-</body>
-<script>
-    function myfun()
-    {
-        const quotes = [  "The only way to do great work is to love what you do. - Steve Jobs",
-    "Success is not final, failure is not fatal: It is the courage to continue that counts. - Winston Churchill",
-    "The greatest glory in living lies not in never falling, but in rising every time we fall. - Nelson Mandela",
-    "Believe you can and you're halfway there. - Theodore Roosevelt",
-    "The future belongs to those who believe in the beauty of their dreams. - Eleanor Roosevelt",
-    "The only limit to our realization of tomorrow will be our doubts of today. - Franklin D. Roosevelt",
-    "You miss 100% of the shots you don't take. - Wayne Gretzky",
-    "In the middle of every difficulty lies opportunity. - Albert Einstein",
-    "The best way to predict the future is to create it. - Peter Drucker",
-    "It does not matter how slowly you go as long as you do not stop. - Confucius"];
-        const randomQuote = Math.floor(Math.random() * quotes.length);
-        let quote = document.getElementById("para");
-        quote.innerHTML = quotes[randomQuote];
-        console.log("hello there")
-    }
-</script>
+  </body>
+  <script src="script.js"></script>
 </html>
